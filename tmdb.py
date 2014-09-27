@@ -97,7 +97,7 @@ class Movies(Core):
         self.limit = limit
         self.update_configuration()
         self.searched = title
-        title = self.escape(title)
+        #title = self.escape(title)
         self.movies = self.getJSON(config['urls']['movie.search'] % (title,str(1)), language=language)
         pages = self.movies["total_pages"]
         if not self.limit:
